@@ -1,14 +1,10 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
-import CategoryCheckBox from "./CategoryCheckBox";
 import { DishDataContext } from "../../Context/DishDataProvider";
 import { v4 as uv4 } from "uuid";
-import { CategoryContext } from "../../Context/CategoryProvider";
 import CategorySelect from "../utils/CategorySelect";
 
 const Form = () => {
   const { dishData, addDish } = useContext(DishDataContext);
-
-  const { categories: ctx_categories } = useContext(CategoryContext);
 
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
@@ -38,7 +34,6 @@ const Form = () => {
     const id = uv4();
     console.log({ id, name, img, price, categories });
     const newDish = { id, dish: name, image: img, price, category: categories };
-    // if(dishData.)
     addDish(newDish);
     resetFrm();
   };
@@ -81,15 +76,6 @@ const Form = () => {
       <div className="flex flex-col mb-3">
         <label htmlFor="category">Category</label>
         <div className="chk-group flex gap-3">
-          {/* {ctx_categories.map((item) => (
-            <CategoryCheckBox
-              item={item}
-              key={item.id}
-              setCategories={setCategories}
-              categories={categories}
-              isClear={isClear}
-            />
-          ))} */}
           <CategorySelect setState={setCategories} ref={categoryRef} />
         </div>
       </div>
