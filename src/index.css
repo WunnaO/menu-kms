@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.active_menu{
+  background-color: #f7f7f752;
+}
+
+.active_menu + span{
+  font-weight: bolder;
+}
+
+table{
+  width: 100%;
+}
+
+table,tr,td,th{
+  border: 1px solid black;
+  text-align: center;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
