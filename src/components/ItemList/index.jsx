@@ -12,10 +12,10 @@ const ItemList = () => {
     console.log(dishData);
     let dataFilter = [];
     dishData.forEach((item) => {
+      console.log(item);
       console.log(item.category);
-
       item.category.forEach(
-        (c) => c == activeMenuItem.value && dataFilter.push(item)
+        (c) => c.value == activeMenuItem.value && dataFilter.push(item)
       );
     });
     console.log(dataFilter);
