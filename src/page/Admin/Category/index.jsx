@@ -16,7 +16,6 @@ const Category = () => {
   }, []);
   return (
     <div>
-      Category
       <Form />
       <div className="mt-5">
         <CategoryTable />

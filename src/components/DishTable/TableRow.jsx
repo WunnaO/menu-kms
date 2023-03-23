@@ -26,6 +26,31 @@ const TableRow = ({ item, index }) => {
     setIsEdit({ id: "", edit: false });
     setEditDish();
   };
+
+  const date = new Date();
+
+  const defaultDate = date.toLocaleDateString();
+  const UpDate = date.toLocaleDateString();
+
+  const defaultTime = date.toLocaleTimeString("en-US", {
+    hour: "numeric",
+    minute: "numeric",
+    second: "numeric",
+    hour12: true,
+  });
+  const UpTime = date.toLocaleTimeString("en-US", {
+    hour: "numeric",
+    minute: "numeric",
+    second: "numeric",
+    hour12: true,
+  });
+
+  console.log(date);
+  // console.log(defaultDate);
+  // console.log(UpDate);
+  console.log(defaultTime);
+  // console.log(UpTime);
+
   return (
     <tr>
       <td>{index + 1}</td>
@@ -70,6 +95,13 @@ const TableRow = ({ item, index }) => {
           item.price
         )}
       </td>
+      <td>
+        <div className="text-neutral-800">
+          <div>{defaultDate}</div>
+          <div>{defaultTime}</div>
+        </div>
+      </td>
+      <td>Wanna Oo</td>
       <td>
         {isEdit.id == item.id && isEdit.edit ? (
           <EditCategorySelect

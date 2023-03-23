@@ -1,6 +1,7 @@
 import React, { memo, useState } from "react";
 import { MenuData } from "../../data/menuData";
 import MenuItem from "./MenuItem";
+import { BsPersonCircle } from "react-icons/bs";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const SideBar = ({ menus }) => {
@@ -15,35 +16,48 @@ const SideBar = ({ menus }) => {
         isOpen ? "w-[230px]" : "w-[90px]"
       } h-screen bg-slate-700 pt-8 px-5 transition-[width] ease-[cubic-bezier(0.55, 0.67, 0.23, 0.92)]`}
     >
-      <div className="flex flex-col gap-5">
-        <div className="flex relative items-center">
-          <img
-            src="/assets/images/restaurant_logo.webp"
-            className="border border-red-500"
-            width={44}
-            height={44}
-          />
-          <div
-            className="absolute right-[-30px] cursor-pointer"
-            onClick={() => setIsOpen(!isOpen)}
-          >
+      <div className="flex flex-col justify-between">
+        <div className="flex flex-col gap-5">
+          <div className="flex relative items-center">
             <img
-              className={`${!isOpen && "rotate-180"}`}
-              src="/assets/images/control.png"
-              width={22}
-              alt=""
-              srcset=""
+              src="/assets/images/restaurant_logo.webp"
+              className="border border-red-500"
+              width={44}
+              height={44}
             />
+            <div
+              className="absolute right-[-30px] cursor-pointer"
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              <img
+                className={`${!isOpen && "rotate-180"}`}
+                src="/assets/images/control.png"
+                width={22}
+                alt=""
+                srcset=""
+              />
+            </div>
           </div>
+
+          {menus.length > 0 &&
+            menus.map((menu) => (
+              <MenuItem menu={menu} key={menu.id} isOpen={isOpen} />
+            ))}
         </div>
 
-        {menus.length > 0 &&
-          menus.map((menu) => (
-            <MenuItem menu={menu} key={menu.id} isOpen={isOpen} />
-          ))}
-        <Link to={current ? "/" : "/admin"} className=" text-sm text-white">
-          {current ? "User" : "Admin"}
-        </Link>
+        <div className="bottom-0 gap-4 flex flex-col">
+          <div>
+            <BsPersonCircle
+              size={32}
+              className="text-slate-200 cursor-pointer items-center w-[100%]"
+            ></BsPersonCircle>
+          </div>
+          <div className="text-center">
+            <Link to={current ? "/" : "/admin"} className=" text-sm text-white">
+              {current ? "User" : "Admin"}
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   );

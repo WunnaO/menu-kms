@@ -12,6 +12,8 @@ const DishTable = () => {
           <th>Image</th>
           <th>Dish Name</th>
           <th>Price</th>
+          <th>Update Date</th>
+          <th>Admin Name</th>
           <th>Category</th>
           <th>Action</th>
         </thead>

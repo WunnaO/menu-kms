@@ -6,13 +6,16 @@ import "./css/output.css";
 import MenuProvider from "./Context/MenuProvider";
 import DishDataProvider from "./Context/DishDataProvider";
 import CategoryProvider from "./Context/CategoryProvider";
+import LoginCheckProvide from "./Context/LoginCheckProvide";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-    <MenuProvider>
-      <DishDataProvider>
-        <CategoryProvider>
+  <MenuProvider>
+    <DishDataProvider>
+      <CategoryProvider>
+        <LoginCheckProvide>
           <App />
-        </CategoryProvider>
-      </DishDataProvider>
-    </MenuProvider>
+        </LoginCheckProvide>
+      </CategoryProvider>
+    </DishDataProvider>
+  </MenuProvider>
 );
