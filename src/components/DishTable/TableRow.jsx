@@ -80,7 +80,7 @@ const TableRow = ({ item, index }) => {
         ) : (
           item.category.map((cat) => (
             <span className=" mx-1 text-white bg-yellow-600 rounded-md px-2 py-[2px]">
-              {cat}
+              {cat.value}
             </span>
           ))
         )}

@@ -16,7 +16,7 @@ const CategorySelect = forwardRef(({ setState }, ref) => {
         classNamePrefix="select"
         ref={ref}
         onChange={(e) => {
-          const cat = e.map((item) => item.value);
+          const cat = e.map((item) => item);
           setState(cat);
         }}
       />

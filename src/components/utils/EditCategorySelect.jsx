@@ -5,22 +5,12 @@ import Select from "react-select";
 const EditCategorySelect = ({ setEdit, edit, propName }) => {
   const { categories } = useContext(CategoryContext);
   console.log(categories);
-  const [defaultValue, setDefaultValue] = useState([]);
-  const { category } = edit;
-  category.forEach((c) => {
-    categories.map((item) => {
-      if (item.value === c) {
-        defaultValue.push(item);
-      }
-    });
-    console.log([...defaultValue]);
-  });
 
   return (
     <div>
       <Select
         isMulti
-        defaultValue={defaultValue}
+        defaultValue={edit.category}
         name="categories"
         options={categories}
         className="w-full"
