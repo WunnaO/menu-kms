@@ -4,24 +4,24 @@ export const MenuData = [
     id: 2,
     title: "Main",
     icon: "Main_dish.jpg",
-    value:"main"
+    value: "main",
   },
   {
     id: 3,
     title: "Appetite",
     icon: "appetite.webp",
-    value:"appetite"
+    value: "appetite",
   },
   {
     id: 4,
     title: "Snack",
     icon: "snack.jpg",
-    value:"snack"
+    value: "snack",
   },
   {
     id: 5,
     title: "Drinks",
     icon: "drink.webp",
-    value:"drink"
+    value: "drink",
   },
 ];

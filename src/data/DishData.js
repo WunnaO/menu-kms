@@ -4,7 +4,20 @@ export const DishData = [
     image: "http://localhost:5173/assets/images/dish-1.png",
     dish: "Hamburger",
     price: 50,
-    category: ["snack", "main"],
+    category: [
+      {
+        id: 1,
+        c_name: "snack",
+        value: "snack",
+        label: "snack",
+      },
+      {
+        id: 2,
+        c_name: "main",
+        value: "main",
+        label: "main",
+      },
+    ],
     recommend: true,
   },
   {
@@ -12,7 +25,14 @@ export const DishData = [
     image: "http://localhost:5173/assets/images/dish-3.png",
     dish: "Roasted Chicken",
     price: 150,
-    category: ["main"],
+    category: [
+      {
+        id: 2,
+        c_name: "main",
+        value: "main",
+        label: "main",
+      },
+    ],
     recommend: true,
   },
   {
@@ -20,7 +40,14 @@ export const DishData = [
     image: "http://localhost:5173/assets/images/dish-4.png",
     dish: "Pizza",
     price: 100,
-    category: ["snack"],
+    category: [
+      {
+        id: 1,
+        c_name: "snack",
+        value: "snack",
+        label: "snack",
+      },
+    ],
     recommend: true,
   },
   {
@@ -28,7 +55,14 @@ export const DishData = [
     image: "http://localhost:5173/assets/images/home-img-1.png",
     dish: "Spaghetti",
     price: 100,
-    category: ["appetite"],
+    category: [
+      {
+        id: 4,
+        c_name: "appetite",
+        value: "appetite",
+        label: "appetite",
+      },
+    ],
     recommend: false,
   },
   {
@@ -36,7 +70,14 @@ export const DishData = [
     image: "http://localhost:5173/assets/images/menu-9.jpg",
     dish: "Orange Juice",
     price: 100,
-    category: ["drink"],
+    category: [
+      {
+        id: 3,
+        c_name: "drink",
+        value: "drink",
+        label: "drink",
+      },
+    ],
     recommend: false,
   },
   {
@@ -44,7 +85,14 @@ export const DishData = [
     image: "http://localhost:5173/assets/images/about-img.png",
     dish: "Fried dumplings",
     price: 30,
-    category: ["appetite"],
+    category: [
+      {
+        id: 4,
+        c_name: "appetite",
+        value: "appetite",
+        label: "appetite",
+      },
+    ],
     recommend: false,
   },
   {
@@ -52,7 +100,20 @@ export const DishData = [
     image: "http://localhost:5173/assets/images/menu-7.jpg",
     dish: "Mango Juice",
     price: 30,
-    category: ["drink", "main"],
+    category: [
+      {
+        id: 3,
+        c_name: "drink",
+        value: "drink",
+        label: "drink",
+      },
+      {
+        id: 2,
+        c_name: "main",
+        value: "main",
+        label: "main",
+      },
+    ],
     recommend: false,
   },
   {
@@ -60,7 +121,14 @@ export const DishData = [
     image: "http://localhost:5173/assets/images/dish-6.png",
     dish: "Fried Chicken",
     price: 70,
-    category: ["main"],
+    category: [
+      {
+        id: 2,
+        c_name: "main",
+        value: "main",
+        label: "main",
+      },
+    ],
     recommend: true,
   },
 ];
