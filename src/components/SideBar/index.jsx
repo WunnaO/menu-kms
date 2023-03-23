@@ -39,7 +39,7 @@ const SideBar = ({ menus }) => {
 
         {menus.length > 0 &&
           menus.map((menu) => (
-            <MenuItem menu={menu} key={menu.id} isOpen={isOpen}  />
+            <MenuItem menu={menu} key={menu.id} isOpen={isOpen} />
           ))}
         <Link to={current ? "/" : "/admin"} className=" text-sm text-white">
           {current ? "User" : "Admin"}

@@ -23,8 +23,8 @@ const CategoryCheckBox = ({ item, setCategories, categories, isClear }) => {
           );
           if (e.target.checked) {
             setCategories([...filterCategories, e.target.value]);
-          }else{
-            setCategories(filterCategories)
+          } else {
+            setCategories(filterCategories);
           }
         }}
         className="mr-2"

@@ -6,16 +6,16 @@ import { MenuContext } from "../../../Context/MenuProvider";
 import { Link } from "react-router-dom";
 
 const Home = () => {
-    const [menus, setMenus] = useState(MenuData);
-    const {setActiveMenuItem} = useContext(MenuContext)
-    useEffect(() => {
-      setActiveMenuItem(menus[0])
-    }, [])
-    
+  const [menus, setMenus] = useState(MenuData);
+  const { setActiveMenuItem } = useContext(MenuContext);
+  useEffect(() => {
+    setActiveMenuItem(menus[0]);
+  }, []);
+
   return (
     <div className="flex">
       <SideBar menus={menus} />
-     
+
       <ItemList />
     </div>
   );

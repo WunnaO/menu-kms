@@ -6,14 +6,8 @@ import EditImg from "./EditImg";
 import EditCategorySelect from "../utils/EditCategorySelect";
 
 const TableRow = ({ item, index }) => {
-  const {
-    editDish,
-    setEditDish,
-    isEdit,
-    setIsEdit,
-    removeDish,
-    updateDish,
-  } = useContext(DishDataContext);
+  const { editDish, setEditDish, isEdit, setIsEdit, removeDish, updateDish } =
+    useContext(DishDataContext);
   const onEditHandler = () => {
     setEditDish(item);
     setIsEdit({ id: item.id, edit: true });

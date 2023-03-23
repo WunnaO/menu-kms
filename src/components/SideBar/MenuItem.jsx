@@ -10,7 +10,7 @@ const MenuItem = ({ menu, isOpen }) => {
       className="flex items-center"
       onClick={() => {
         setActiveMenuItem(menu);
-        console.log({menu});
+        console.log({ menu });
         if (menu.link) {
           navigate(menu.link);
         }
