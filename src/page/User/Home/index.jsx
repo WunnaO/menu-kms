@@ -3,7 +3,6 @@ import SideBar from "../../../components/SideBar";
 import ItemList from "../../../components/ItemList";
 import { MenuData } from "../../../data/menuData";
 import { MenuContext } from "../../../Context/MenuProvider";
-import { Link } from "react-router-dom";
 
 const Home = () => {
   const [menus, setMenus] = useState(MenuData);
