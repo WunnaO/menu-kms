@@ -1,24 +1,17 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { AuthContext } from "../../context/AuthProvider";
+import { LoginCheckContext } from "../../Context/LoginCheckProvide";
 
 const Login = () => {
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
-  const { isAuth, login, errorMsg, setErrorMsg } = useContext(AuthContext);
+  const { login } = useContext(LoginCheckContext);
 
   const navigator = useNavigate();
 
   useEffect(() => {
-    if (isAuth) {
-      navigator("/");
-    } else {
-      if (errorMsg) {
-        alert(errorMsg);
-        setErrorMsg("");
-      }
-    }
-  }, [isAuth, errorMsg]);
+    navigator("/admin");
+  }, []);
 
   const onSubmitHandler = (e) => {
     console.log("login");

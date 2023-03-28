@@ -5,11 +5,13 @@ import Admin from "../page/Admin/Home";
 import Category from "../page/Admin/Category";
 import AdminLayout from "../layout/AdminLayout";
 import Setting from "../page/Admin/Setting";
+import Login from "../page/Login";
 
 const Router = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/login" element={<Login />} />
       <Route path="/admin" element={<AdminLayout />}>
         <Route index element={<Admin />} />
         <Route path="category" element={<Category />} />
