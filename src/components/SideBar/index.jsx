@@ -1,8 +1,7 @@
-import React, { memo, useState } from "react";
-import { MenuData } from "../../data/menuData";
+import React, { useState } from "react";
 import MenuItem from "./MenuItem";
 import { BsPersonCircle } from "react-icons/bs";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const SideBar = ({ menus }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,7 +15,10 @@ const SideBar = ({ menus }) => {
         isOpen ? "w-[230px]" : "w-[90px]"
       } h-screen bg-slate-700 pt-8 px-5 transition-[width] ease-[cubic-bezier(0.55, 0.67, 0.23, 0.92)]`}
     >
-      <div className="flex flex-col justify-between">
+      <div
+        className={`${current ? "gap-56" : "gap-28"}
+        flex flex-col`}
+      >
         <div className="flex flex-col gap-5">
           <div className="flex relative items-center">
             <img
@@ -47,10 +49,12 @@ const SideBar = ({ menus }) => {
 
         <div className="bottom-0 gap-4 flex flex-col">
           <div>
-            <BsPersonCircle
-              size={32}
-              className="text-slate-200 cursor-pointer items-center w-[100%]"
-            ></BsPersonCircle>
+            <Link to={"/login"}>
+              <BsPersonCircle
+                size={32}
+                className="text-slate-200 cursor-pointer items-center w-[100%]"
+              ></BsPersonCircle>
+            </Link>
           </div>
           <div className="text-center">
             <Link to={current ? "/" : "/admin"} className=" text-sm text-white">
